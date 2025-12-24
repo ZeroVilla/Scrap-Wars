@@ -14,6 +14,7 @@ public class ModCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ScrapWars.MOD_ID);
 
+    @SuppressWarnings("null")
     public static final RegistryObject<CreativeModeTab> SCRAPWARS_TAB =
             CREATIVE_TABS.register("scrapwars_tab", () -> CreativeModeTab.builder()
                     .title(Component.translatable("creativetab.scrapwars"))
