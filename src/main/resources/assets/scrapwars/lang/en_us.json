@@ -1,5 +1,9 @@
 {
   "creativetab.scrapwars": "Scrap Wars",
-  
-  "item.scrapwars.scrap": "Scrap"
+
+  "item.scrapwars.scrap": "Scrap",
+  "item.scrapwars.tech_scrap": "Tech Scrap",
+  "item.scrapwars.scrap_fragments": "Scrap Fragments",
+  "item.scrapwars.mechanical_component": "Mechanical Component",
+  "item.scrapwars.old_battery": "Old Battery"
 }

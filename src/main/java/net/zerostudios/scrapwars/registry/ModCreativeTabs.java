@@ -21,6 +21,10 @@ public class ModCreativeTabs {
                     .icon(() -> new ItemStack(ModItems.SCRAP.get()))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.SCRAP.get());
+                        output.accept(ModItems.TECH_SCRAP.get());
+                        output.accept(ModItems.SCRAP_FRAGMENTS.get());
+                        output.accept(ModItems.MECHANICAL_COMPONENT.get());
+                        output.accept(ModItems.OLD_BATTERY.get());
                     })
                     .build()
             );
