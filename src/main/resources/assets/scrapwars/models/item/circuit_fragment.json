@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "scrapwars:item/scrap_fragments"
+    "layer0": "scrapwars:item/circuit_fragment"
   }
 }

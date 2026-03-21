@@ -1,9 +1,11 @@
 {
-  "creativetab.scrapwars": "Scrap Wars",
+  "item_group.scrapwars.scrap_wars": "Scrap Wars",
+  
+  "item.scrapwars.scrap_metal": "Scrap Metal",
+  "item.scrapwars.wire_bundle": "Wire Bundle",
+  "item.scrapwars.mechanical_parts": "Mechanical Parts",
+  "item.scrapwars.circuit_fragment": "Circuit Fragment",
+  "item.scrapwars.damaged_battery": "Damaged Battery",
 
-  "item.scrapwars.scrap": "Scrap",
-  "item.scrapwars.tech_scrap": "Tech Scrap",
-  "item.scrapwars.scrap_fragments": "Scrap Fragments",
-  "item.scrapwars.mechanical_component": "Mechanical Component",
-  "item.scrapwars.old_battery": "Old Battery"
+  "block.scrapwars.scrap_pile": "Scrap Pile"
 }

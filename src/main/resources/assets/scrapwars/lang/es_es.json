@@ -1,0 +1,11 @@
+{
+  "item_group.scrapwars.scrap_wars": "Scrap Wars",
+
+  "item.scrapwars.scrap_metal": "Chatarra",
+  "item.scrapwars.wire_bundle": "Paquete de Cables",
+  "item.scrapwars.mechanical_parts": "Partes Mecánicas",
+  "item.scrapwars.circuit_fragment": "Fragmento de Circuito",
+  "item.scrapwars.damaged_battery": "Batería Dañada",
+
+  "block.scrapwars.scrap_pile": "Montón de Chatarra"
+}

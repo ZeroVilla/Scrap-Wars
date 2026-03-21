@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "scrapwars:block/scrap_pile"
+    }
+  }
+}
