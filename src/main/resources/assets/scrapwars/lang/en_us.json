@@ -9,5 +9,18 @@
   "item.scrapwars.metal_plate": "Metal Plate",
 
   "block.scrapwars.scrap_pile": "Scrap Pile",
-  "block.scrapwars.improvised_workbench": "Improvised Workbench"
+  "block.scrapwars.improvised_workbench": "Improvised Workbench",
+
+  "gui.scrapwars.craft": "Craft",
+  "gui.scrapwars.materials": "Materials:",
+  "gui.scrapwars.ready": "Ready",
+  "gui.scrapwars.missing": "Missing",
+  "gui.scrapwars.unknown": "Unknown",
+  "gui.scrapwars.category.all": "All",
+  "gui.scrapwars.category.weapons": "Weapons",
+  "gui.scrapwars.category.tools": "Tools",
+  "gui.scrapwars.category.electronics": "Electronics",
+  "gui.scrapwars.category.components": "Components",
+  "gui.scrapwars.category.materials": "Materials"
+
 }
