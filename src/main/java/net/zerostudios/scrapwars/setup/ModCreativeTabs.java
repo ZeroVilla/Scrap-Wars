@@ -24,7 +24,9 @@ public final class ModCreativeTabs {
                         output.accept(ModItems.MECHANICAL_PARTS.get());
                         output.accept(ModItems.CIRCUIT_FRAGMENT.get());
                         output.accept(ModItems.DAMAGED_BATTERY.get());
+                        output.accept(ModItems.METAL_PLATE.get());
                         output.accept(ModBlocks.SCRAP_PILE.get());
+                        output.accept(ModBlocks.IMPROVISED_WORKBENCH.get());
                     })
                     .build()
     );

@@ -6,6 +6,8 @@
   "item.scrapwars.mechanical_parts": "Partes Mecánicas",
   "item.scrapwars.circuit_fragment": "Fragmento de Circuito",
   "item.scrapwars.damaged_battery": "Batería Dañada",
+  "item.scrapwars.metal_plate": "Placa de Metal",
 
-  "block.scrapwars.scrap_pile": "Montón de Chatarra"
+  "block.scrapwars.scrap_pile": "Montón de Chatarra",
+  "block.scrapwars.improvised_workbench": "Mesa Improvisada"
 }

@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import net.zerostudios.scrapwars.common.block.ImprovisedWorkbenchBlock;
 import net.zerostudios.scrapwars.common.block.ScrapPileBlock;
 import net.zerostudios.scrapwars.common.util.ModIds;
 
@@ -18,6 +19,9 @@ public final class ModBlocks {
 
     public static final RegistryObject<Block> SCRAP_PILE =
             registerBlock("scrap_pile", ScrapPileBlock::new);
+
+    public static final RegistryObject<Block> IMPROVISED_WORKBENCH =
+            registerBlock("improvised_workbench", ImprovisedWorkbenchBlock::new);
 
     private ModBlocks() {
     }

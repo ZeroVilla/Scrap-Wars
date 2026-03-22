@@ -16,6 +16,7 @@ public final class ModItems {
     public static final RegistryObject<Item> MECHANICAL_PARTS = registerSimpleItem("mechanical_parts");
     public static final RegistryObject<Item> CIRCUIT_FRAGMENT = registerSimpleItem("circuit_fragment");
     public static final RegistryObject<Item> DAMAGED_BATTERY = registerSimpleItem("damaged_battery");
+    public static final RegistryObject<Item> METAL_PLATE = registerSimpleItem("metal_plate");
 
     private ModItems() {
     }

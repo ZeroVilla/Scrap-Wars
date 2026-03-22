@@ -6,6 +6,8 @@
   "item.scrapwars.mechanical_parts": "Mechanical Parts",
   "item.scrapwars.circuit_fragment": "Circuit Fragment",
   "item.scrapwars.damaged_battery": "Damaged Battery",
+  "item.scrapwars.metal_plate": "Metal Plate",
 
-  "block.scrapwars.scrap_pile": "Scrap Pile"
+  "block.scrapwars.scrap_pile": "Scrap Pile",
+  "block.scrapwars.improvised_workbench": "Improvised Workbench"
 }
