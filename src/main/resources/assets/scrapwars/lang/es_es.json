@@ -11,15 +11,15 @@
   "block.scrapwars.scrap_pile": "Montón de Chatarra",
   "block.scrapwars.improvised_workbench": "Mesa Improvisada",
 
-  "gui.scrapwars.craft": "Fabricar",
-  "gui.scrapwars.materials": "Materiales:",
+  "gui.scrapwars.assemble": "Ensamblar",
+  "gui.scrapwars.materials": "Materiales",
   "gui.scrapwars.ready": "Listo",
   "gui.scrapwars.missing": "Faltan",
   "gui.scrapwars.unknown": "Desconocido",
   "gui.scrapwars.category.all": "Todo",
   "gui.scrapwars.category.weapons": "Armas",
   "gui.scrapwars.category.tools": "Herramientas",
-  "gui.scrapwars.category.electronics": "Electrónica",
+  "gui.scrapwars.category.electronics": "Electrónicos",
   "gui.scrapwars.category.components": "Componentes",
   "gui.scrapwars.category.materials": "Materiales"
 }

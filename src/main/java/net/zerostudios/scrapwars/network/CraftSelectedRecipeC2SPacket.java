@@ -1,12 +1,13 @@
 package net.zerostudios.scrapwars.network;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraftforge.network.NetworkEvent;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.world.item.ItemStack;
 import net.zerostudios.scrapwars.common.blockentity.ImprovisedWorkbenchBlockEntity;
 import net.zerostudios.scrapwars.common.recipe.improvised.ImprovisedWorkbenchRecipe;
 import net.zerostudios.scrapwars.common.workbench.WorkbenchRecipeHelper;
@@ -68,8 +69,9 @@ public class CraftSelectedRecipeC2SPacket {
 
             WorkbenchRecipeHelper.consumeMaterials(player, recipe);
 
-            if (!player.getInventory().add(recipe.getResultItem(player.level().registryAccess()).copy())) {
-                player.drop(recipe.getResultItem(player.level().registryAccess()).copy(), false);
+            ItemStack result = recipe.getResultItem(player.level().registryAccess()).copy();
+            if (!player.getInventory().add(result)) {
+                player.drop(result, false);
             }
 
             player.level().playSound(

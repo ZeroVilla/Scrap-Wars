@@ -11,8 +11,8 @@
   "block.scrapwars.scrap_pile": "Scrap Pile",
   "block.scrapwars.improvised_workbench": "Improvised Workbench",
 
-  "gui.scrapwars.craft": "Craft",
-  "gui.scrapwars.materials": "Materials:",
+  "gui.scrapwars.assemble": "Assemble",
+  "gui.scrapwars.materials": "Materials",
   "gui.scrapwars.ready": "Ready",
   "gui.scrapwars.missing": "Missing",
   "gui.scrapwars.unknown": "Unknown",

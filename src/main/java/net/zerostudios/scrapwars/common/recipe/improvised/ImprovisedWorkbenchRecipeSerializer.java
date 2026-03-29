@@ -6,7 +6,9 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.zerostudios.scrapwars.common.workbench.WorkbenchCategory;
 import net.zerostudios.scrapwars.common.workbench.WorkbenchIngredient;
 
@@ -17,18 +19,19 @@ public class ImprovisedWorkbenchRecipeSerializer implements RecipeSerializer<Imp
 
     @Override
     public ImprovisedWorkbenchRecipe fromJson(ResourceLocation id, JsonObject json) {
-
         String categoryId = GsonHelper.getAsString(json, "category", "all");
         WorkbenchCategory category = WorkbenchCategory.fromId(categoryId);
 
         JsonArray ingredientsJson = GsonHelper.getAsJsonArray(json, "ingredients");
-
         List<WorkbenchIngredient> ingredients = new ArrayList<>();
 
         for (int i = 0; i < ingredientsJson.size(); i++) {
             JsonObject obj = ingredientsJson.get(i).getAsJsonObject();
 
-            Ingredient ingredient = Ingredient.fromJson(obj.get("item"));
+            JsonObject ingredientObject = obj.deepCopy();
+            ingredientObject.remove("count");
+
+            Ingredient ingredient = Ingredient.fromJson(ingredientObject);
             int count = GsonHelper.getAsInt(obj, "count", 1);
 
             ingredients.add(new WorkbenchIngredient(ingredient, count));
@@ -41,16 +44,15 @@ public class ImprovisedWorkbenchRecipeSerializer implements RecipeSerializer<Imp
 
     @Override
     public ImprovisedWorkbenchRecipe fromNetwork(ResourceLocation id, FriendlyByteBuf buf) {
-
         WorkbenchCategory category = WorkbenchCategory.values()[buf.readInt()];
 
         int size = buf.readInt();
         List<WorkbenchIngredient> ingredients = new ArrayList<>();
 
         for (int i = 0; i < size; i++) {
-            Ingredient ing = Ingredient.fromNetwork(buf);
+            Ingredient ingredient = Ingredient.fromNetwork(buf);
             int count = buf.readInt();
-            ingredients.add(new WorkbenchIngredient(ing, count));
+            ingredients.add(new WorkbenchIngredient(ingredient, count));
         }
 
         ItemStack result = buf.readItem();
@@ -60,14 +62,12 @@ public class ImprovisedWorkbenchRecipeSerializer implements RecipeSerializer<Imp
 
     @Override
     public void toNetwork(FriendlyByteBuf buf, ImprovisedWorkbenchRecipe recipe) {
-
         buf.writeInt(recipe.getCategory().ordinal());
 
         buf.writeInt(recipe.getIngredientsList().size());
-
-        for (WorkbenchIngredient ing : recipe.getIngredientsList()) {
-            ing.ingredient().toNetwork(buf);
-            buf.writeInt(ing.count());
+        for (WorkbenchIngredient ingredient : recipe.getIngredientsList()) {
+            ingredient.ingredient().toNetwork(buf);
+            buf.writeInt(ingredient.count());
         }
 
         buf.writeItem(recipe.getResultItem(net.minecraft.core.RegistryAccess.EMPTY));
